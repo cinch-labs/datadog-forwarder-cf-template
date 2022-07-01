@@ -1,4 +1,4 @@
-name: Deploy stac
+name: Deploy stack
 
 # Controls when the workflow will run
 on:
@@ -17,11 +17,18 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+
+      - name: Configure AWS credentials (ONR dev ephemeral stacks)
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::315037948697:role/infrastructure/service-deployment-integrations
+          role-session-name: account_deploy_role
+          aws-region: eu-west-1
       
       - name: Deploy stack
         uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
         with:
           name: datadog-forwarder
-          template: myStack.yaml
-          parameter-overrides: "MyParam1=myValue,MyParam2=${{ secrets.MY_SECRET_VALUE }}"
+          template: template.yaml
+          parameter-overrides: "DdApiKeySecretArn=arn:aws:secretsmanager:eu-west-1:315037948697:secret:DDForwarderApiKey-gTHTwf,DdSite=datadoghq.com"
 
