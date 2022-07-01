@@ -643,8 +643,7 @@ Resources:
         - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
       PermissionsBoundary:
         - arn:aws:iam::315037948697:policy/infrastructure/CinchRoleBoundary
-      Path:
-        - /platform/
+      Path: "/platform/"
       Policies:
         - PolicyName: ForwarderRolePolicy0
           PolicyDocument:
@@ -930,8 +929,7 @@ Resources:
         - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
       PermissionsBoundary:
         - arn:aws:iam::315037948697:policy/infrastructure/CinchRoleBoundary
-      Path:
-        - /platform/
+      Path: "/platform/"
       Policies:
         - PolicyName: ForwarderZipCopierRolePolicy0
           PolicyDocument:
