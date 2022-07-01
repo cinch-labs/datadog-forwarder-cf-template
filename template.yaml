@@ -644,7 +644,7 @@ Resources:
       PermissionsBoundary:
         - arn:aws:iam::315037948697:policy/infrastructure/CinchRoleBoundary
       Path:
-        - "/platform/"
+        - /platform/
       Policies:
         - PolicyName: ForwarderRolePolicy0
           PolicyDocument:
@@ -931,7 +931,7 @@ Resources:
       PermissionsBoundary:
         - arn:aws:iam::315037948697:policy/infrastructure/CinchRoleBoundary
       Path:
-        - "/platform/"
+        - /platform/
       Policies:
         - PolicyName: ForwarderZipCopierRolePolicy0
           PolicyDocument:
