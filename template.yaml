@@ -641,8 +641,7 @@ Resources:
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
         - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
-      PermissionsBoundary:
-        - arn:aws:iam::315037948697:policy/infrastructure/CinchRoleBoundary
+      PermissionsBoundary: "arn:aws:iam::315037948697:policy/infrastructure/CinchRoleBoundary"
       Path: "/platform/"
       Policies:
         - PolicyName: ForwarderRolePolicy0
@@ -927,8 +926,7 @@ Resources:
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
         - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
-      PermissionsBoundary:
-        - arn:aws:iam::315037948697:policy/infrastructure/CinchRoleBoundary
+      PermissionsBoundary: "arn:aws:iam::315037948697:policy/infrastructure/CinchRoleBoundary"
       Path: "/platform/"
       Policies:
         - PolicyName: ForwarderZipCopierRolePolicy0
