@@ -43,5 +43,5 @@ jobs:
         with:
           name: datadog-forwarder
           template: template.yaml
-          parameter-overrides: "DdApiKeySecretArn=arn:aws:secretsmanager:eu-west-1:315037948697:secret:DDForwarderApiKey-gTHTwf,DdSite=datadoghq.com"
+          parameter-overrides: "DdApiKeySecretArn=arn:aws:secretsmanager:eu-west-1:315037948697:secret:DDForwarderApiKey-gTHTwf,DdSite=datadoghq.com,FunctionName=datadog-forwarder"
 
